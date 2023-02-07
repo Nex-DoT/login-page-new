@@ -76,16 +76,27 @@ function erore(index,message){
 }
 
 function success(index){
+    const alertTextuser=aleret.querySelector('.usernamep');
+    const alertTextpass=aleret.querySelector('.passp');
+    const alertTextemail=aleret.querySelector('.emailp');
     if(index==username){
         username.style.border="2px solid green" ;
+        username.style.animation="";
+        username.style.backgroundColor= '38c84955';
+        alertTextuser.innerHTML="";
     }
     if(index==email){
         email.style.border="2px solid green" ;
-
+        email.style.animation="";
+        alertTextemail.innerHTML="";
         
     }
     if(index==pass){
         pass.style.border="2px solid green" ;
+        pass.style.animation="";
+        alertTextpass.innerHTML="";
+
+
     }
     if(index==pass || index==email || index==username){
       aleret.classList.remove('active');
