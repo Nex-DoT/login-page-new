@@ -194,7 +194,9 @@ body{
     color: white;
     transition: 0.3s all;
 }
-.inputs .login .input input:focus{
+.inputs .login .input input:focus,
+.inputs .singup .input  input:focus
+{
     border-color:rgba(255, 255, 255, 0.48) ;
 }
 .checkbox{
@@ -221,4 +223,54 @@ button{
 }
 button:hover{
     background-color:orangered;
+}
+
+
+.alert{
+    position: absolute;
+    width: 280px;
+    height: 115px;
+    background-color: rgba(255, 255, 255, 0.333);
+    top: 30px;
+    left: -150px;
+    border-radius: 3px;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    font-size: 10px;
+    color: orange;
+    animation: redalert 0.5s infinite;
+    opacity: 0;
+    transition: 0.3s all;
+
+}
+.alert p {
+    
+}
+.alert.active{
+    left: 135px;
+    opacity: 1;
+}
+@keyframes redalert{
+    0%{box-shadow: 0 0 3px 0 red;}
+    50%{box-shadow: 0 0 6px 0 red;}
+    100%{box-shadow: 0 0 3px 0 red;}
+}
+.alert .fa-exclamation-triangle{
+    position: absolute;
+    top: 10px;
+    font-size: 17px;
+    margin-right: 5px;
+    color: red;
+}
+.alert .fa-times-circle{
+    font-size: 13px;
+
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: orange;
 }
