@@ -1,0 +1,224 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('./fonts/vazir.eot') format('eot'),
+     url('./fonts/vazir.ttf') format('truetype'),
+    url('./fonts/vazir.woff') format('woff'),
+    url('./fonts/vazir.woff2') format('woff2');
+}
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: 'vazir';
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(#80808036, #000000a3 ,#000000e4  ) , url(./img/895.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+.back {
+    position: absolute;
+    right: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(252, 118, 41, 0.621);
+    transform: skewX(25deg);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.656);
+}
+.back .backgr{
+    position: absolute;
+    right: 3%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(21, 21, 21);
+    transform: skewX(15deg);
+    box-shadow: 0 5px 10px 0 rgb(0, 0, 0);
+}
+.box{
+    position: absolute;
+    width: 250px;
+    height: 350px;
+    border: 1px solid orange;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 150px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    overflow: hidden;
+}
+.chose{
+    position: absolute;
+    top: 25px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border:1px solid orange;
+    border-radius: 25px;
+    height: 50px;
+    color: white;
+}
+.chose span{
+    width: 50%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    transition: 0.3s all;
+}
+.chose h3{
+    z-index: 100;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.icon{
+    position: absolute;
+    top: 70px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 50%;
+}
+.icon i{
+    font-size: 25px;
+    margin: 30px 0;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+.icon .fa-twitter-square{
+    animation: twiter 2s infinite;
+    color: #7373fa;
+     font-size: 30;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+@keyframes twiter{
+    0%{box-shadow: 0 0 5px 0 #6b6bff ;}
+    25%{box-shadow: 0 0 10px 0 #6b6bff;}
+    50%{box-shadow: 0 0 6px 0 #6b6bff;}
+    100%{box-shadow: 0 0 5px 0 #6b6bff;}
+}
+.icon .fa-facebook{
+    animation: facebok 2s infinite;
+    color: #6548f6;
+    border-radius: 50%;
+    font-size: 28px;
+    overflow: hidden;
+}
+@keyframes facebok{
+    0%{box-shadow: 0 0 5px 0 #ff5dff ;}
+    25%{box-shadow: 0 0 10px 0 #ff5dff;}
+    50%{box-shadow: 0 0 6px 0 #ff5dff;}
+    100%{box-shadow: 0 0 5px 0 #ff5dff;}
+}
+.icon .fa-google{
+    color: white;
+    animation: gogle 2s infinite;
+    border-radius: 50%;
+    overflow: hidden;
+    font-size: 28px;
+}
+@keyframes gogle{
+    0%{box-shadow: 0 0 5px 0 gray ;}
+    25%{box-shadow: 0 0 10px 0 gray;}
+    50%{box-shadow: 0 0 6px 0 gray;}
+    100%{box-shadow: 0 0 5px 0 gray;}
+}
+.inputs{
+    width:500px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    height: 180px;
+    transition: all 0.3s;
+}
+.inputs .login div,
+.inputs .singup div
+{
+    margin: auto;
+    width: 90%;
+    height: 29px;
+    position: relative;
+    margin-bottom:18px ;
+}
+.inputs .login div label,
+.inputs .singup div label
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    color: white;
+    font-size:10px ;
+    width: 70px;
+    height: 100%;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+.inputs .login .input input,
+.inputs .singup .input  input
+{
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 166, 0, 0.219);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.085);
+    padding-left: 85px;
+    color: white;
+    transition: 0.3s all;
+}
+.inputs .login .input input:focus{
+    border-color:rgba(255, 255, 255, 0.48) ;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    font-size: 11px;
+}
+.checkbox p{
+    margin: 5px;
+}
+
+
+button{
+    position: absolute;
+    bottom: 0;
+    width: 250px;
+    background-color: orange;
+    border: none;
+    cursor: pointer;
+    height: 38px;
+    transition: all 0.3s;
+}
+button:hover{
+    background-color:orangered;
+}
