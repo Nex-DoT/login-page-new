@@ -246,9 +246,6 @@ button:hover{
     transition: 0.3s all;
 
 }
-.alert p {
-    
-}
 .alert.active{
     left: 135px;
     opacity: 1;
