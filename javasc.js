@@ -85,20 +85,20 @@ function success(index){
         username.style.backgroundColor= '38c84955';
         alertTextuser.innerHTML="";
     }
-    if(index==email){
+    else if(index==email){
         email.style.border="2px solid green" ;
         email.style.animation="";
         alertTextemail.innerHTML="";
         
     }
-    if(index==pass){
+    else if(index==pass){
         pass.style.border="2px solid green" ;
         pass.style.animation="";
         alertTextpass.innerHTML="";
 
 
     }
-    if(index==pass || index==email || index==username){
+    if(index===pass,index===email,index===username){
       aleret.classList.remove('active');
     }
 }
